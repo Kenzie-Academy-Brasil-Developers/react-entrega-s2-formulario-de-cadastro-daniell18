@@ -63,7 +63,7 @@ const Form = ({ setFormData }) => {
   const history = useHistory();
   const onhandleSubmit = (e) => {
     setFormData(e);
-    history.push("/login");
+    history.push(`/login/${e.username}`);
   };
   return (
     <>

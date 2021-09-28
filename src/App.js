@@ -13,7 +13,7 @@ function App() {
           <Route exact path="/">
             <Form setFormData={setFormData} />
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/login/:id">
             <Login formData={formData} />
           </Route>
         </Switch>

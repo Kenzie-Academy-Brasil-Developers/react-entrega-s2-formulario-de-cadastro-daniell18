@@ -1,8 +1,10 @@
 import { Button, Grid, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 const Login = ({ formData }) => {
+  const params = useParams();
+
   const useStyles = makeStyles((theme) => ({
     root: { height: "100vh", backgroundColor: "black", gap: "20px" },
     Paper: {
@@ -43,7 +45,7 @@ const Login = ({ formData }) => {
       >
         <Grid item>
           <h1 className={classe.title}>
-            Parabens {formData.username} seu cadastro foi realizado
+            Parabens {params.id} seu cadastro foi realizado
           </h1>
         </Grid>
         <Grid item>
